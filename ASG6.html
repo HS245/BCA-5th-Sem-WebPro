@@ -1,0 +1,82 @@
+<!--Q6: Create a webpage in javascript to find the grade of a student using switch case (number of sub=10, total marks for each sub=200  -->
+<html>
+<head>
+<title>ASG6;</title>
+
+<script language="javascript">
+	
+	var s1=prompt("Enter mark of Sub 1 :");
+	var s2=prompt("Enter mark of Sub 2 :");
+	var s3=prompt("Enter mark of Sub 3 :");
+	var s4=prompt("Enter mark of Sub 4 :");
+	var s5=prompt("Enter mark of Sub 5 :");
+	var s6=prompt("Enter mark of Sub 6 :");
+	var s7=prompt("Enter mark of Sub 7 :");
+	var s8=prompt("Enter mark of Sub 8 :");
+	var s9=prompt("Enter mark of Sub 9 :");
+	var s10=prompt("Enter mark of Sub 10 :");
+
+</script>
+
+</head>
+<body align=center>
+<script language="javascript">
+
+	var sum=(Number(s1)+Number(s2)+Number(s3)+Number(s4)+Number(s5)+Number(s6)+Number(s7)+Number(s8)+Number(s9)+Number(s10));
+	var per = (sum/2000)*100;
+	 document.write("Sub 1 mark: "+ Number(s1)+"<br>");
+	 document.write("Sub 2 mark: "+ Number(s2)+"<br>"); 
+	 document.write("Sub 3 mark: "+ Number(s3)+"<br>"); 
+	 document.write("Sub 4 mark: "+ Number(s4)+"<br>"); 
+	document.write("Sub 5 mark: "+ Number(s5)+"<br>");
+	 document.write("Sub 6 mark: "+ Number(s6)+"<br>");
+	 document.write("Sub 7 mark: "+ Number(s7)+"<br>");
+	document.write("Sub 8 mark: "+ Number(s8)+"<br>");
+	 document.write("Sub 9 mark: "+ Number(s9)+"<br>"); 
+	 document.write("Sub 10 mark: "+ Number(s10)+"<br>");
+	
+	document.write("<h3>Total Mark Scored out of 2000: "+sum+"</h3>");
+	document.write("<h3> Percentage: "+per+"</h3>");
+
+	if(per<0 || per>100)
+	{
+		document.write("Error");
+	}	
+else
+{
+	if(per<=100 && per>80)
+	{
+		document.write("<h2>Grade A<h/2>");
+				
+	}
+	else if(per<80 && per>=70)
+	{
+		document.write("<h2>Grade B</h2>");
+				
+	}
+	else if(per<70 && per>= 60)
+	{
+	document.write("<h2>Grade C</h2>");
+			
+	}
+	else if(per<60 && per>=40)
+	{
+	document.write("<h2>Grade D</h2>");
+			
+	}
+	else if(per<40 && per>=0)
+	{
+	document.write("<h2>Fail</h2>");
+			
+	}
+	
+}
+</script>
+	
+	
+
+</body>
+
+
+
+</html>

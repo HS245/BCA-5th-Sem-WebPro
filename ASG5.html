@@ -1,0 +1,21 @@
+<!-- Q5: Create a webpage using javascript to calculate maximum of 3 numbers using conditional operator -->
+<html>
+    <head>
+      <title> Max of 3 Numbers</title>
+
+      <script language="javascript">
+        var num1 = prompt("Enter First Number");
+        var num2 =prompt("Enter second number");
+        var num3 =prompt("Enter third number");
+      </script>
+
+   </head>
+ 
+   <body>
+    <h2> Max of 3 Numbers</h2>
+     <script language="javascript">
+      var result = (Number(num1)>Number(num2)&&Number(num1)>Number(num3)?Number(num1):Number(num2)>Number(num1)&&Number(num2)>Number(num3)?Number(num2):Number(num3))
+      document.write("Maximum number is "+result);
+    </script>
+   </body>
+</html>

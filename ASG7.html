@@ -1,0 +1,76 @@
+<!-- Q7: Create a webpage of registration form of student (Roll No, Course, Semester, User ID and Password) Display another page for 
+successfull entry otherwie alert should be display -->
+<html>
+<head>
+<title>ASG7</title>
+
+<head>
+<style>
+ form {
+  border: 2px solid black;
+  padding: 20px;
+  width: 50%;
+  margin: auto;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+input[type="text"], input[type="password"] {
+  width: 200px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+</style>
+  <body>
+  <table>
+   <h3> Login form</h3>
+    <form align =Center , >
+	  Roll no <input type="Number" name="r1"/><br><br>
+	  Name <input type="Text" name="name"/><br><br>
+	  Course <input type="Text" name="course"/><br><br>
+	  Semester <input type="Text" name="semister"/> <br><br>
+	  User id <input type="Text" name="id"/><br><br>
+	  Password <input type="Password" name="ps"/><br><br>
+	  <input type="Button" ONCLICK="check(this.form)"value="Login"/>
+	  <input type="Reset" value="Cancel"/>
+    </form>
+<script language="javascript">
+	function check(form)
+	{
+		if(form.r1.value=="" || form.name.value=="" || form.course.value=="" || form.semister.value=="" || form.id.value=="" || form.ps.value=="" )
+		{	
+			alert("Please Fill The Form");
+		}
+		else if(form.id.value=="HassanHS" && form.ps.value=="123")
+		{
+			window.open("redirect7.html");
+		}
+		else
+		{
+			alert("Error");
+		}
+	}
+ 
+</script>
+
+</table>
+</body>
+
+
+</html>
