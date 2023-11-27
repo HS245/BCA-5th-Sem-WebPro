@@ -1,0 +1,81 @@
+<!--Q11: Create a webpage to desing a form of entering a number and check whether the number 
+is positive, then check whether the number is armstrong or perfect number.
+ Use Internal Css to design the webpage.  -->
+
+<html>
+<head>
+  <title>Number Checker</title>
+  <style>
+     body {
+      font-family: Arial, sans-serif;
+    }
+    label {
+      font-weight: bold;
+    }
+    input[type="number"] {
+      padding: 5px;
+      margin: 5px 0;
+    }
+    button {
+      padding: 8px 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color:black;
+    }
+    #result {
+      margin-top: 10px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <h1>Number Checker</h1>
+  <label for="numberInput">Enter a number:</label>
+  <input type="number" id="numberInput">
+  <button onclick="checkNumber()">Check</button>
+  <p id="result"></p>
+
+  <script>
+    function checkNumber() {
+      let number = parseInt(document.getElementById('numberInput').value);
+      let result = document.getElementById('result');
+
+      if (number > 0) {
+        result.textContent = `${number} is a positive number.`;
+        // Check for Armstrong number
+        let sum = 0;
+        let temp = number;
+        let numberOfDigits = number.toString().length;
+        while (temp > 0) {
+          let remainder = temp % 10;
+          sum += Math.pow(remainder, numberOfDigits);
+          temp = parseInt(temp / 10);
+        }
+        if (sum === number) {
+          result.textContent += ` ${number} is also an Armstrong number.`;
+        } else {
+          result.textContent += ` ${number} is not an Armstrong number.`;
+        }
+        // Check for Perfect number
+        let perfectSum = 0;
+      for (let i = 1; i < number; i++) {
+        if (number % i === 0) {
+          perfectSum += i;
+        }
+      }
+      if (perfectSum === number) {
+        result.textContent += ` ${number} is also a Perfect number.`;
+      } else {
+        result.textContent += ` ${number} is not a Perfect number.`;
+      }
+      } else {
+        result.textContent = `${number} is not a positive number.`;
+      }
+    }
+  </script>
+</body>
+</html>
